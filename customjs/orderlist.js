@@ -86,9 +86,7 @@ function appendProduct(prod){
           <div class="visit">RM${product.total}</div>
           <div class="visit">${product.status}</div>
           <div class="percentage">
-                <a href="./function/editOrder.php?OrderID=${product.OrderID}" class="genric-btn warning radius">Edit Order </a>
-                <span> &nbsp &nbsp &nbsp </span>
-                <a href="./function/deleteORder.php?OrderID=${product.OrderID}" class="genric-btn danger radius">Cancel Order</a>
+                <a href="./function/deleteOrder.php?OrderID=${product.OrderID}" class="genric-btn danger radius">Cancel Order</a>
           </div>
         </div>
         `);
