@@ -40,15 +40,10 @@
                   </div>
                   <div class="hearer_icon d-flex">
                       <div class="dropdown cart">
-                          <a class="dropdown-toggle" href="#" id="navbarDropdown3" role="button"
-                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <a class="dropdown-toggle" href="./cart.php" id="navbarDropdown3">
                               <i class="fas fa-cart-plus"></i>
                           </a>
-                          <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <div class="single_product">
 
-                              </div>
-                          </div> -->
 
                       </div>
                   </div>
@@ -56,14 +51,8 @@
           </div>
       </div>
   </div>
-  <div class="search_input" id="search_input_box">
-      <div class="container ">
-          <form class="d-flex justify-content-between search-inner">
-              <input type="text" class="form-control" id="search_input" placeholder="Search Here">
-              <button type="submit" class="btn"></button>
-              <span class="ti-close" id="close_search" title="Close Search"></span>
-          </form>
-      </div>
-  </div>
+
 </header>
 <!-- Header part end-->
+  <script src="js/jquery-1.12.1.min.js"></script>
+<script src="customjs/miniCart.js"></script>
