@@ -66,33 +66,22 @@ include 'includes/header.php';
                             <div class="widgets_inner">
                                 <ul class="list">
                                     <li>
-                                        <a href="#">Frozen Fish</a>
+                                        <a href="#">Sofa</a>
                                         <span>(250)</span>
                                     </li>
                                     <li>
-                                        <a href="#">Dried Fish</a>
+                                        <a href="#">Table and Desk</a>
                                         <span>(250)</span>
                                     </li>
                                     <li>
-                                        <a href="#">Fresh Fish</a>
+                                        <a href="#">Chair</a>
                                         <span>(250)</span>
                                     </li>
                                     <li>
-                                        <a href="#">Meat Alternatives</a>
+                                        <a href="#">Bed</a>
                                         <span>(250)</span>
                                     </li>
-                                    <li>
-                                        <a href="#">Fresh Fish</a>
-                                        <span>(250)</span>
-                                    </li>
-                                    <li>
-                                        <a href="#">Meat Alternatives</a>
-                                        <span>(250)</span>
-                                    </li>
-                                    <li>
-                                        <a href="#">Meat</a>
-                                        <span>(250)</span>
-                                    </li>
+
                                 </ul>
                             </div>
                         </aside>
@@ -123,27 +112,7 @@ include 'includes/header.php';
                             </div>
                         </aside>
 
-                        <aside class="left_widgets p_filter_widgets price_rangs_aside">
-                            <div class="l_w_title">
-                                <h3>Price Filter</h3>
-                            </div>
-                            <div class="widgets_inner">
-                                <div class="range_item">
-                                    <!-- <div id="slider-range"></div> -->
-                                    <input type="text" class="js-range-slider" value="" />
-                                    <div class="d-flex">
-                                        <div class="price_text">
-                                            <p>Price :</p>
-                                        </div>
-                                        <div class="price_value d-flex justify-content-center">
-                                            <input type="text" class="js-input-from" id="amount" readonly />
-                                            <span>to</span>
-                                            <input type="text" class="js-input-to" id="amount" readonly />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </aside>
+
                     </div>
                 </div>
                 <div class="col-lg-9">
@@ -154,8 +123,8 @@ include 'includes/header.php';
                                     <p><span>10000 </span> Prodict Found</p>
                                 </div>
                                 <div class="single_product_menu d-flex">
-                                    <h5>short by : </h5>
-                                    <select>
+                                    <h5>sort by : </h5>
+                                    <select >
                                         <option data-display="Select">name</option>
                                         <option value="1">price</option>
                                         <option value="2">product</option>
@@ -165,9 +134,9 @@ include 'includes/header.php';
                                     <h5>show :</h5>
                                     <div class="top_pageniation">
                                         <ul>
-                                            <li>1</li>
-                                            <li>2</li>
-                                            <li>3</li>
+                                            <li><a href="#" style="color:black;">1</a></li>
+                                            <li><a href="#" style="color:black;">2</a></li>
+                                            <li><a href="#" style="color:black;">3</a></li>
                                         </ul>
                                     </div>
                                 </div>

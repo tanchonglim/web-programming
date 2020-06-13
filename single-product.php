@@ -59,21 +59,11 @@ include 'includes/header.php';
               <div data-thumb="img/product/single-product/product_1.png">
                 <img src="img/product/single-product/product_1.png" />
               </div>
-              <div data-thumb="img/product/single-product/product_1.png">
-                <img src="img/product/single-product/product_1.png" />
-              </div>
-              <div data-thumb="img/product/single-product/product_1.png">
-                <img src="img/product/single-product/product_1.png" />
-              </div>
-              <div data-thumb="img/product/single-product/product_1.png">
-                <img src="img/product/single-product/product_1.png" />
-              </div>
             </div>
           </div>
         </div>
         <div class="col-lg-5 col-xl-4">
           <div class="s_product_text">
-            <h5>previous <span>|</span> next</h5>
             <h3>Faded SkyBlu Denim Jeans</h3>
             <h2>$149.99</h2>
             <ul class="list">
@@ -82,7 +72,10 @@ include 'includes/header.php';
                   <span>Category</span> : Household</a>
               </li>
               <li>
-                <a href="#"> <span>Availibility</span> : In Stock</a>
+                <a> <span>Availibility</span> : In Stock</a>
+              </li>
+              <li>
+                 <a> <span>Color</span> : Red</a>
               </li>
             </ul>
             <p>
@@ -96,7 +89,6 @@ include 'includes/header.php';
                 <span class="number-increment"> <i class="ti-plus"></i></span>
               </div>
               <a href="#" class="btn_3">add to cart</a>
-              <a href="#" class="like_us"> <i class="ti-heart"></i> </a>
             </div>
           </div>
         </div>
