@@ -1,5 +1,8 @@
 <?php
 include 'includes/header.php';
+if(isset($_SESSION['UID'])){
+  header('Location:index.php');
+}
  ?>
 
 <!doctype html>
@@ -78,7 +81,7 @@ include 'includes/header.php';
                           <h2>Already has an account??</h2>
                           <p>There are advances being made in science and technology
                               everyday, and a good example of this is the</p>
-                          <a href="register.php" class="btn_3">Log in</a>
+                          <a href="login.php" class="btn_3">Log in</a>
                       </div>
                   </div>
               </div>

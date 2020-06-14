@@ -1,3 +1,7 @@
+<?php
+session_start();
+ ?>
+
 <!--::header part start::-->
 <header class="main_menu home_menu">
   <div class="container">
@@ -29,13 +33,26 @@
                             <div style="margin-left:200px;">
                             </div>
                           </li>
+                          <?php
+                            if(!isset($_SESSION['UID'])){
+
+
+                           ?>
                           <li class="nav-item">
                               <a href="login.php" class="genric-btn primary circle" style=" margin:15px;">LOGIN</a>
                           </li>
                           <li class="nav-item">
                               <a href="register.php" class="genric-btn primary-border circle" style=" margin:15px;">Register</a>
                           </li>
-
+                          <?php
+                        } else {
+                           ?>
+                          <li class="nav-item">
+                              <a href="./function/logout.php" class="genric-btn warning-border circle" style=" margin:15px;">Logout</a>
+                          </li>
+                          <?php
+                        };
+                           ?>
                       </ul>
                   </div>
                   <div class="hearer_icon d-flex">
