@@ -70,33 +70,7 @@ if(!isset($_SESSION['UID'])){
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>
-                  <div class="media">
-                    <div class="d-flex">
-                      <img src="img/product/single-product/cart-1.jpg" alt="" />
-                    </div>
-                    <div class="media-body">
-                      <p>Minimalistic shop for multipurpose use</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <h5>$360.00</h5>
-                </td>
-                <td>
-                  <div class="product_count">
-                    <span class="input-number-decrement"> <i class="ti-angle-down"></i></span>
-                    <input class="input-number" type="text" value="1" min="0" max="10">
-                    <span class="input-number-increment"> <i class="ti-angle-up"></i></span>
-                  </div>
-                </td>
-                <td>
-                  <h5>$720.00</h5>
-                </td>
-                <td>
-                  <a href="#" class="genric-btn danger-border circle">Delete</a>
-                </td>
+              <tr id="addedProduct"> <!-- used by jquery to add list of products -->
               </tr>
 
               <tr>
@@ -106,9 +80,10 @@ if(!isset($_SESSION['UID'])){
                   <h5>Subtotal</h5>
                 </td>
                 <td>
-                  <h5>RM160.00</h5>
+                  <h5>RM <span id="subTotal">0.00</span></h5>
                 </td>
               </tr>
+
               <tr class="shipping_area">
                 <td></td>
                 <td></td>
@@ -116,7 +91,7 @@ if(!isset($_SESSION['UID'])){
                   <h5>Shipping</h5>
                 </td>
                 <td>
-                  <h5>RM5.00</h5>
+                  <h5>RM0.00</h5>
                 </td>
               </tr>
               <tr>
@@ -126,7 +101,7 @@ if(!isset($_SESSION['UID'])){
                   <h3>Total</h3>
                 </td>
                 <td>
-                  <h3>RM165.00</h3>
+                  <h3>RM <span id="total">0.00</span></h3>
                 </td>
               </tr>
             </tbody>
@@ -172,6 +147,7 @@ if(!isset($_SESSION['UID'])){
   <script src="js/price_rangs.js"></script>
   <!-- custom js -->
   <script src="js/custom.js"></script>
+  <script src="customjs/cart.js"></script>
 </body>
 
 </html>

@@ -77,9 +77,8 @@ session_start();
 <script>
 
 $(document).ready(function(){
-  if(localStorage.getItem("productQty")!=null){
-      $(".supNum").html(localStorage.getItem("productQty"));
-  }
+  $(".supNum").html(localStorage.length);
+
 });
 
 </script>

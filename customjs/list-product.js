@@ -4,6 +4,14 @@ $(document).ready(function(){
 
   $.getJSON( `./function/getProduct.php`, function( data ) {
 
+    data.sort((a, b) => {
+      if(a.ProductID < b.ProductID){
+        return 1;
+      } else {
+        return -1;
+      }
+      return 0;
+    });
 
     appendProduct(data);
 
@@ -30,22 +38,21 @@ function appendProduct(prod){
 }
 
 function addToCart(productID){
-  if(localStorage.getItem("productQty")==null){
-    localStorage.setItem("productQty",'1');
-  } else {
-    let totalItem = parseInt(localStorage.getItem("productQty")) + 1;
-    localStorage.setItem("productQty",totalItem);
-  }
-  $(".supNum").html(localStorage.getItem("productQty"));
+  //add product to local localStorage
+  
+  localStorage.setItem(productID,1);
+
+  $(".supNum").html(localStorage.length);
 
   // Get the snackbar DIV
   var x = document.getElementById("snackbar");
-
   // Add the "show" class to DIV
   x.className = "show";
-
   // After 3 seconds, remove the show class from DIV
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+
+
+
 
 
 }
