@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  $('.fa-cart-plus').append('<sup class="supNum">0</sup>');
+  $('.fa-cart-plus').append('');
   $('.supNum').css({
     "position": "absolute",
     "border-radius": "50%",

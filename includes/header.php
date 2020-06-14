@@ -41,7 +41,8 @@
                   <div class="hearer_icon d-flex">
                       <div class="dropdown cart">
                           <a class="dropdown-toggle" href="./cart.php" id="navbarDropdown3">
-                              <i class="fas fa-cart-plus"></i>
+                              <i class="fas fa-cart-plus"><sup class="supNum">0</sup></i>
+
                           </a>
 
 

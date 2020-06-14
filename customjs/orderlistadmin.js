@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  $.getJSON( `./function/getOrder.php?user=user`, function( data ) {
+  $.getJSON( `./function/getOrder.php?user=admin`, function( data ) {
 
     //add event listener to buttons
     $("#all").css("color","ff3368");
@@ -70,7 +70,7 @@ $(document).ready(function(){
 
 });
 
-    //append product into table
+
 function appendProduct(prod){
   for(product of prod) {
     if(product.status == 'new order'){
@@ -86,47 +86,8 @@ function appendProduct(prod){
           <div class="visit">RM${product.total}</div>
           <div class="visit">${product.status}</div>
           <div class="percentage">
-                <a href="./function/deleteOrder.php?OrderID=${product.OrderID}" class="genric-btn danger radius">Cancel Order</a>
-          </div>
-        </div>
-        `);
-    } else {
-      $("#productsList").append(`
-        <div class="table-row">
-          <div class="serial">${product.OrderID}</div>
-          <div class="country">
-            <ul>
-              <li>table</li>
-              <li>chair</li>
-            </ul>
-          </div>
-          <div class="visit">RM${product.total}</div>
-          <div class="visit">${product.status}</div>
-          <div class="percentage">
-          </div>
-        </div>
-        `);
-    }
-
-  };
-}
-
-function appendProductAdmin(prod){
-  for(product of prod) {
-    if(product.status == 'new order'){
-      $("#productsList").append(`
-        <div class="table-row">
-          <div class="serial">${product.OrderID}</div>
-          <div class="country">
-            <ul>
-              <li>table</li>
-              <li>chair</li>
-            </ul>
-          </div>
-          <div class="visit">RM${product.total}</div>
-          <div class="visit">${product.status}</div>
-          <div class="percentage">
-                <a href="#" class="genric-btn danger radius">Update Status</a>
+                <a href="#" class="genric-btn info radius">Update Status</a>
+                &nbsp &nbsp
                 <a href="./function/deleteOrder.php?OrderID=${product.OrderID}" class="genric-btn danger radius">Cancel Order</a>
           </div>
         </div>
