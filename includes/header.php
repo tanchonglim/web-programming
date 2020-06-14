@@ -74,3 +74,12 @@ session_start();
 <!-- Header part end-->
   <script src="js/jquery-1.12.1.min.js"></script>
 <script src="customjs/miniCart.js"></script>
+<script>
+
+$(document).ready(function(){
+  if(localStorage.getItem("productQty")!=null){
+      $(".supNum").html(localStorage.getItem("productQty"));
+  }
+});
+
+</script>

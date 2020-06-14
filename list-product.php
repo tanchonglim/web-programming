@@ -31,6 +31,7 @@ include 'includes/header.php';
     <link rel="stylesheet" href="css/price_rangs.css">
     <!-- style CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/snackbar.css">
 </head>
 
 <body>
@@ -154,97 +155,11 @@ include 'includes/header.php';
                         </div>
                     </div>
 
-                    <div class="row align-items-center latest_product_inner">
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single_product_item">
-                                <img src="img/product/product_1.png" alt="">
-                                <div class="single_product_text">
-                                    <h4>Quartz Belt Watch</h4>
-                                    <h3>$150.00</h3>
-                                    <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single_product_item">
-                                <img src="img/product/product_2.png" alt="">
-                                <div class="single_product_text">
-                                    <h4>Quartz Belt Watch</h4>
-                                    <h3>$150.00</h3>
-                                    <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single_product_item">
-                                <img src="img/product/product_3.png" alt="">
-                                <div class="single_product_text">
-                                    <h4>Quartz Belt Watch</h4>
-                                    <h3>$150.00</h3>
-                                    <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single_product_item">
-                                <img src="img/product/product_4.png" alt="">
-                                <div class="single_product_text">
-                                    <h4>Quartz Belt Watch</h4>
-                                    <h3>$150.00</h3>
-                                    <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single_product_item">
-                                <img src="img/product/product_5.png" alt="">
-                                <div class="single_product_text">
-                                    <h4>Quartz Belt Watch</h4>
-                                    <h3>$150.00</h3>
-                                    <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single_product_item">
-                                <img src="img/product/product_6.png" alt="">
-                                <div class="single_product_text">
-                                    <h4>Quartz Belt Watch</h4>
-                                    <h3>$150.00</h3>
-                                    <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single_product_item">
-                                <img src="img/product/product_7.png" alt="">
-                                <div class="single_product_text">
-                                    <h4>Quartz Belt Watch</h4>
-                                    <h3>$150.00</h3>
-                                    <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single_product_item">
-                                <img src="img/product/product_8.png" alt="">
-                                <div class="single_product_text">
-                                    <h4>Quartz Belt Watch</h4>
-                                    <h3>$150.00</h3>
-                                    <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single_product_item">
-                                <img src="img/product/product_2.png" alt="">
-                                <div class="single_product_text">
-                                    <h4>Quartz Belt Watch</h4>
-                                    <h3>$150.00</h3>
-                                    <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="row align-items-center latest_product_inner" >
+                      <span id="products"></span> <!-- lable for jquery display product list -->
+
+
+
                         <div class="col-lg-12">
                             <div class="pageination">
                                 <nav aria-label="Page navigation example">
@@ -274,6 +189,7 @@ include 'includes/header.php';
             </div>
         </div>
     </section>
+    <div id="snackbar">Product added to cart !</div>
     <!--================End Category Product Area =================-->
 
 
@@ -309,6 +225,7 @@ include 'includes/footer.php';
     <script src="js/price_rangs.js"></script>
     <!-- custom js -->
     <script src="js/custom.js"></script>
+    <script src="customjs/list-product.js"></script>
 </body>
 
 </html>
