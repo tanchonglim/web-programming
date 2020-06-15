@@ -44,13 +44,29 @@ $uid = $_SESSION['UID'];
 
    $OrderID = $_GET['OrderID'];
 
+   $allOrder = array();
+
+
+
+   $sql2 = "SELECT product.ProductName AS pdn, productorder.quantity AS qty, product.ProductPrice As price FROM product
+   INNER JOIN productorder ON
+   productorder.productID = product.ProductID WHERE productorder.orderID = '".$OrderID."'";
+   $result2 = mysqli_query($con,$sql2);
+   $productList = array();
+   while($row2 = mysqli_fetch_assoc($result2)){
+     $product = array(
+       "productName" => $row2['pdn'],
+       "price" => $row2['price'],
+       "quantity" => $row2['qty'],
+     );
+     array_push($productList, $product);
+   }
+
    $sql = "SELECT * FROM `order` WHERE `OrderID`='".$OrderID."' ";
 
    $result = mysqli_query($con,$sql);
+   $row = mysqli_fetch_assoc($result);
 
-   $allOrder = array();
-
-   while($row = mysqli_fetch_assoc($result)){
      $order = array(
        "OID" => $row['OID'],
        "OrderID" => $row['OrderID'],
@@ -69,9 +85,10 @@ $uid = $_SESSION['UID'];
        "total" => $row['total'],
        "status" => $row['status'],
        "time" => $row['time'],
+       "products" => $productList,
      );
      array_push($allOrder, $order);
-   }
+
 
    echo json_encode($allOrder);
 

@@ -119,34 +119,22 @@ if(!isset($_SESSION['UID'])){
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th colspan="2"><span>Pixelstore fresh Blackberry</span></th>
-                  <th>x02</th>
-                  <th> <span>$720.00</span></th>
+                <tr id="productList">
                 </tr>
-                <tr>
-                  <th colspan="2"><span>Pixelstore fresh Blackberry</span></th>
-                  <th>x02</th>
-                  <th> <span>$720.00</span></th>
-                </tr>
-                <tr>
-                  <th colspan="2"><span>Pixelstore fresh Blackberry</span></th>
-                  <th>x02</th>
-                  <th> <span>$720.00</span></th>
-                </tr>
+
                 <tr>
                   <th colspan="3">Subtotal</th>
-                  <th> <span>$2160.00</span></th>
+                  <th> <span>RM<span class="price"></span></span></th>
                 </tr>
                 <tr>
                   <th colspan="3">shipping</th>
-                  <th><span>flat rate: $50.00</span></th>
+                  <th><span>RM0.00</span></th>
                 </tr>
               </tbody>
               <tfoot>
                 <tr>
-                  <th scope="col" colspan="3">Quantity</th>
-                  <th scope="col">Total</th>
+                  <th scope="col" colspan="3">Total</th>
+                  <th scope="col">RM<span class="price"></span></th>
                 </tr>
               </tfoot>
             </table>
