@@ -20,12 +20,45 @@ session_start();
                           <li class="nav-item">
                               <a class="nav-link" href="index.php">Home</a>
                           </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="list-product.php">Product</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="order.php">Order</a>
-                          </li>
+
+                          <?php
+                          if(!isset($_SESSION['UID'])){
+
+                            ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="list-product.php">Product</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="order.php">Order</a>
+                            </li>
+
+                            <?php
+                          } else {
+                            if($_SESSION['UID']!='1'){
+                              ?>
+                              <li class="nav-item">
+                                  <a class="nav-link" href="list-product.php">Product</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link" href="order.php">Order</a>
+                              </li>
+                              <?php
+                            } else {
+                              ?>
+                              <li class="nav-item">
+                                  <a class="nav-link" href="list-product.php">Product</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link" href="admin-order.php">Order</a>
+                              </li>
+                              <?php
+                            }
+                          }
+
+                           ?>
+
+
+
                           <li class="nav-item">
                               <a class="nav-link" href="contact.php">Contact</a>
                           </li>
@@ -35,8 +68,6 @@ session_start();
                           </li>
                           <?php
                             if(!isset($_SESSION['UID'])){
-
-
                            ?>
                           <li class="nav-item">
                               <a href="login.php" class="genric-btn primary circle" style=" margin:15px;">LOGIN</a>
