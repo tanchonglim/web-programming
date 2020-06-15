@@ -46,7 +46,7 @@ session_start();
                             } else {
                               ?>
                               <li class="nav-item">
-                                  <a class="nav-link" href="list-product.php">Product</a>
+                                  <a class="nav-link" href="tblproduct.php">Product</a>
                               </li>
                               <li class="nav-item">
                                   <a class="nav-link" href="admin-order.php">Order</a>
