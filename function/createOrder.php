@@ -40,6 +40,21 @@
 
     $result = mysqli_query($con,$sql);
 
+// store relation between product and order
+    $products = $_POST['product1'];
+    $quantity = $_POST['product1-qty'];
+
+    $counter =1;
+
+    while($products!=''){
+      $sql2 = "INSERT INTO `productorder` (`productID`, `orderID`, `quantity`) VALUES ('".$products."', '".$OrderID."', '".$quantity."')";
+      $result = mysqli_query($con,$sql2);
+      $counter++;
+      $next = "product".$counter;
+      $products = $_POST[$next];
+      $quantity = $_POST[$next.'-qty'];
+    }
+// end
     if ($result){
       header('Location:../confirmation.php?OrderID='.$OrderID);
     } else {

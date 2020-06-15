@@ -73,9 +73,9 @@ $lname = $_SESSION['lname'];
     <div class="container">
       <div class="billing_details">
         <div class="row">
-          <div class="col-lg-8">
+          <div class="col-lg-12">
             <h3>Shipping Details</h3>
-            <form class="row contact_form" action="./function/createOrder.php" method="post" id="checkout_form">
+            <form class="row contact_form" action="./function/createOrder.php" method="post" id="checkout_form" novalidate>
               <div class="col-md-6 form-group p_star">
                 <input type="text" class="form-control" id="first" name="fname" placeholder="First name" value="<?php echo $fname;?>" required/>
               </div>
@@ -128,37 +128,30 @@ $lname = $_SESSION['lname'];
               </div>
 
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-12">
             <div class="order_box">
               <h2>Your Order</h2>
               <ul class="list">
-                <li>
+                <li id="addedProduct">
                   <a>Product
                     <span>Total</span>
                   </a>
                 </li>
-                <li>
-                  <a href="#">Fresh Blackberry
-                    <span class="middle">x 02</span>
-                    <span class="last">RM720.00</span>
-                  </a>
-                </li>
-
               </ul>
               <ul class="list list_2">
                 <li>
                   <a>Subtotal
-                    <span>RM2160.00</span>
+                    <span id="subTotal"></span>
                   </a>
                 </li>
                 <li>
                   <a>Shipping
-                    <span>Flat rate: Rm5.00</span>
+                    <span>Flat rate: Rm0.00</span>
                   </a>
                 </li>
                 <li>
                   <a>Total
-                    <span>RM2210.00</span>
+                    <span id="total"></span>
                   </a>
                 </li>
               </ul>
@@ -184,10 +177,23 @@ $lname = $_SESSION['lname'];
         <!--HIDDEN FORM FIELD -->
         <input type="text" name="UID" value="<?php echo $UID; ?>" hidden>
         <span id="productID"></span> <!-- use to add list of productID -->
-        <input type="text" name="subtotal" value="95" hidden>
+        <input type="text" id="fsubtotal" name="subtotal" value="" hidden>
         <input type="text" name="shipping" value="5" hidden>
-        <input type="text" name="total" value="100" hidden>
-        <!--HIDDEN FORM FIELD -->
+        <input type="text" id="ftotal" name="total" value="" hidden>
+
+        <input type="text" id="product1" name="product1" value="" hidden><input type="text" id="product1-qty" name="product1-qty" value="" hidden>
+        <input type="text" id="product2" name="product2" value="" hidden><input type="text" id="product2-qty" name="product2-qty" value="" hidden>
+        <input type="text" id="product3" name="product3" value="" hidden><input type="text" id="product3-qty" name="product3-qty" value="" hidden>
+        <input type="text" id="product4" name="product4" value="" hidden><input type="text" id="product4-qty" name="product4-qty" value="" hidden>
+        <input type="text" id="product5" name="product5" value="" hidden><input type="text" id="product5-qty" name="product5-qty" value="" hidden>
+        <input type="text" id="product6" name="product6" value="" hidden><input type="text" id="product6-qty" name="product6-qty" value="" hidden>
+        <input type="text" id="product7" name="product7" value="" hidden><input type="text" id="product7-qty" name="product7-qty" value="" hidden>
+        <input type="text" id="product8" name="product8" value="" hidden><input type="text" id="product8-qty" name="product8-qty" value="" hidden>
+        <input type="text" id="product9" name="product9" value="" hidden><input type="text" id="product9-qty" name="product9-qty" value="" hidden>
+        <input type="text" id="product10" name="product10" value="" hidden><input type="text" id="product10-qty" name="product10-qty" value="" hidden>
+
+
+        <!-- HIDDEN FORM FIELD -->
         </form>
       </div>
     </div>
@@ -228,6 +234,7 @@ include 'includes/footer.php';
   <!-- custom js -->
   <script src="js/custom.js"></script>
   <script src='customjs/validatecheckout.js'></script>
+  <script src="customjs/checkout.js"></script>
 
 </body>
 

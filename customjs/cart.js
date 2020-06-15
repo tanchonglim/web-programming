@@ -13,7 +13,6 @@ $(document).ready(function(){
         }
     updateTotal();
       });
-
   }
 
 
@@ -37,7 +36,7 @@ function appendProduct(product){
         <h5>RM${product.ProductPrice}</h5>
       </td>
       <td>
-        <select onchange="updatePrice(${product.ProductID},${product.ProductPrice},this.value)">
+        <select id="qty${product.ProductID}" onchange="updatePrice(${product.ProductID},${product.ProductPrice},this.value)">
         <option value="1"> 1 </option>
         <option value="2"> 2 </option>
         <option value="3"> 3 </option>
@@ -54,6 +53,7 @@ function appendProduct(product){
     </tr>
 
     `);
+    updateQty(product.ProductID, localStorage.getItem(product.ProductID));
 
 }
 
@@ -66,13 +66,18 @@ function updatePrice(ProductID, price, qty){
   let total = price * qty;
   $("#total"+ProductID).html(total);
   updateTotal();
+  localStorage.setItem(ProductID,qty);
+}
+
+function updateQty(QtyID,qty){
+  QtyID = "#qty"+QtyID;
+  $(QtyID).val(qty);
 }
 
 function updateTotal(){
   let total = 0;
   $('.allPRice').each(function(index, obj){
       total += parseInt(obj.innerHTML);
-
   });
   $("#subTotal").html(total);
   $("#total").html(total);

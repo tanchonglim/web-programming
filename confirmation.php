@@ -189,6 +189,9 @@ include 'includes/footer.php';
   <!-- custom js -->
   <script src="js/custom.js"></script>
   <script src="customjs/orderConfirm.js"></script>
+  <script>
+    localStorage.clear();
+  </script>
 </body>
 
 </html>
