@@ -78,10 +78,7 @@ function appendProduct(prod){
         <div class="table-row">
           <div class="serial">${product.OrderID}</div>
           <div class="country">
-            <ul>
-              <li>table</li>
-              <li>chair</li>
-            </ul>
+            <a href ="./confirmation.php?OrderID=${product.OrderID}"> View Details </a>
           </div>
           <div class="visit">RM${product.total}</div>
           <div class="visit">${product.status}</div>
@@ -95,10 +92,7 @@ function appendProduct(prod){
         <div class="table-row">
           <div class="serial">${product.OrderID}</div>
           <div class="country">
-            <ul>
-              <li>table</li>
-              <li>chair</li>
-            </ul>
+            <a href ="./confirmation.php?OrderID=${product.OrderID}"> View Details </a>
           </div>
           <div class="visit">RM${product.total}</div>
           <div class="visit">${product.status}</div>

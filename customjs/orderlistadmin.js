@@ -78,17 +78,44 @@ function appendProduct(prod){
         <div class="table-row">
           <div class="serial">${product.OrderID}</div>
           <div class="country">
-            <ul>
-              <li>table</li>
-              <li>chair</li>
-            </ul>
+          <a href ="./confirmation.php?OrderID=${product.OrderID}"> View Details </a>
           </div>
           <div class="visit">RM${product.total}</div>
           <div class="visit">${product.status}</div>
           <div class="percentage">
-                <a href="#" class="genric-btn info radius">Update Status</a>
+                <a href="./function/updateOrder.php?OrderID=${product.OrderID}&status=ready to ship" class="genric-btn info radius">Confirm</a>
                 &nbsp &nbsp
                 <a href="./function/deleteOrder.php?OrderID=${product.OrderID}" class="genric-btn danger radius">Cancel Order</a>
+          </div>
+        </div>
+        `);
+    } else if(product.status == 'ready to ship'){
+      $("#productsList").append(`
+        <div class="table-row">
+          <div class="serial">${product.OrderID}</div>
+          <div class="country">
+          <a href ="./confirmation.php?OrderID=${product.OrderID}"> View Details </a>
+          </div>
+          <div class="visit">RM${product.total}</div>
+          <div class="visit">${product.status}</div>
+          <div class="percentage">
+                <a href="./function/updateOrder.php?OrderID=${product.OrderID}&status=shipped" class="genric-btn info radius">Ship</a>
+                &nbsp &nbsp
+          </div>
+        </div>
+        `);
+    } else if(product.status == 'shipped'){
+      $("#productsList").append(`
+        <div class="table-row">
+          <div class="serial">${product.OrderID}</div>
+          <div class="country">
+          <a href ="./confirmation.php?OrderID=${product.OrderID}"> View Details </a>
+          </div>
+          <div class="visit">RM${product.total}</div>
+          <div class="visit">${product.status}</div>
+          <div class="percentage">
+                <a href="./function/updateOrder.php?OrderID=${product.OrderID}&status=completed" class="genric-btn info radius">Complete</a>
+                &nbsp &nbsp
           </div>
         </div>
         `);
@@ -97,14 +124,12 @@ function appendProduct(prod){
         <div class="table-row">
           <div class="serial">${product.OrderID}</div>
           <div class="country">
-            <ul>
-              <li>table</li>
-              <li>chair</li>
-            </ul>
+          <a href ="./confirmation.php?OrderID=${product.OrderID}"> View Details </a>
           </div>
           <div class="visit">RM${product.total}</div>
           <div class="visit">${product.status}</div>
           <div class="percentage">
+
           </div>
         </div>
         `);

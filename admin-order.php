@@ -50,6 +50,9 @@ include 'includes/header.php';
 
   <!-- orderlist start-->
 <section class="padding_top">
+  <div class="container" id="delmessage" style="text-align:center; color:red;">
+
+  </div>
   <div class="container">
       <h3 class="mb-30">Order List</h3>
         <ul style="font-size:25px;">
@@ -65,7 +68,7 @@ include 'includes/header.php';
         <div class="progress-table">
           <div class="table-head" id="orderHead">
             <div class="serial">Order ID</div>
-            <div class="country">Products</div>
+            <div class="country">Detail</div>
             <div class="visit">Total</div>
             <div class="visit">Status</div>
             <div class="percentage">Action</div>
@@ -117,6 +120,30 @@ include 'includes/footer.php';
   <!-- custom js -->
   <script src="js/custom.js"></script>
   <script src="customjs/orderlistadmin.js"> </script>
+
 </body>
 
 </html>
+
+<?php
+if(isset($_GET['message'])){
+  if($_GET['message']=='delsuccess'){
+    echo '  <script type="text/javascript">
+        document.getElementById("delmessage").innerHTML="delete success";
+      </script>';
+  } else if ($_GET['message']=='delfail'){
+    echo '  <script type="text/javascript">
+        document.getElementById("delmessage").innerHTML="delete fail";
+      </script>';
+  } else if($_GET['message']=='updatesuccess'){
+    echo '  <script type="text/javascript">
+        document.getElementById("delmessage").innerHTML="update success";
+      </script>';
+    } else if($_GET['message']=='updatefail'){
+      echo '  <script type="text/javascript">
+          document.getElementById("delmessage").innerHTML="update fail";
+        </script>';
+    }
+}
+
+ ?>

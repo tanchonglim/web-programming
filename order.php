@@ -1,7 +1,9 @@
 <?php
 include 'includes/header.php';
 if(!isset($_SESSION['UID'])){
-  header('Location:login.php');
+  header('Location:./login.php');
+} else if($_SESSION['UID']=='1'){
+  header('Location:./admin-order.php');
 }
  ?>
 
@@ -53,6 +55,11 @@ if(!isset($_SESSION['UID'])){
 
   <!-- orderlist start-->
 <section class="padding_top">
+
+  <div class="container" id="delmessage" style="text-align:center; color:red;">
+
+  </div>
+
   <div class="container">
       <h3 class="mb-30">Order List</h3>
         <ul style="font-size:25px;">
@@ -68,7 +75,7 @@ if(!isset($_SESSION['UID'])){
         <div class="progress-table">
           <div class="table-head" id="orderHead">
             <div class="serial">Order ID</div>
-            <div class="country">Products</div>
+            <div class="country">Details</div>
             <div class="visit">Total</div>
             <div class="visit">Status</div>
             <div class="percentage">Action</div>
@@ -123,3 +130,17 @@ include 'includes/footer.php';
 </body>
 
 </html>
+<?php
+if(isset($_GET['message'])){
+  if($_GET['message']=='delsuccess'){
+    echo '  <script type="text/javascript">
+        document.getElementById("delmessage").innerHTML="delete success";
+      </script>';
+  } else {
+    echo '  <script type="text/javascript">
+        document.getElementById("delmessage").innerHTML="delete fail";
+      </script>';
+  }
+}
+
+ ?>

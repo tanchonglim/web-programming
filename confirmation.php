@@ -61,7 +61,7 @@ if(!isset($_SESSION['UID'])){
       <div class="row">
         <div class="col-lg-12">
           <div class="confirmation_tittle">
-            <span>Thank you. Your order has been received.</span>
+
           </div>
         </div>
         <div class="col-lg-6 col-lx-4">
