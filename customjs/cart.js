@@ -36,7 +36,7 @@ function appendProduct(product){
         <h5>RM${product.ProductPrice}</h5>
       </td>
       <td>
-        <select id="qty${product.ProductID}" onchange="updatePrice(${product.ProductID},${product.ProductPrice},this.value)">
+        <select id="qty${product.ProductID}" onchange="updatePrice(${product.ProductID},${product.ProductPrice})" >
         <option value="1"> 1 </option>
         <option value="2"> 2 </option>
         <option value="3"> 3 </option>
@@ -54,7 +54,7 @@ function appendProduct(product){
 
     `);
     updateQty(product.ProductID, localStorage.getItem(product.ProductID));
-
+    updatePrice(product.ProductID, product.ProductPrice);
 }
 
 function removeProduct(productID){
@@ -62,11 +62,13 @@ function removeProduct(productID){
   console.log('removed');
 }
 
-function updatePrice(ProductID, price, qty){
-  let total = price * qty;
-  $("#total"+ProductID).html(total);
+function updatePrice(productID, price){
+  let qtty = $(`#qty${productID}`).val();
+  console.log(qtty);
+  let total = price * qtty;
+  $("#total"+productID).html(total);
   updateTotal();
-  localStorage.setItem(ProductID,qty);
+  localStorage.setItem(productID,qtty);
 }
 
 function updateQty(QtyID,qty){

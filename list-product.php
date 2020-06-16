@@ -66,54 +66,25 @@ include 'includes/header.php';
                             </div>
                             <div class="widgets_inner">
                                 <ul class="list">
+                                  <li>
+                                      <a id="all">All</a>
+                                  </li>
                                     <li>
-                                        <a href="#">Sofa</a>
-                                        <span>(250)</span>
+                                        <a id="sofa">Sofa</a>
                                     </li>
                                     <li>
-                                        <a href="#">Table and Desk</a>
-                                        <span>(250)</span>
+                                        <a id="tnd">Table and Desk</a>
                                     </li>
                                     <li>
-                                        <a href="#">Chair</a>
-                                        <span>(250)</span>
+                                        <a id="chair">Chair</a>
                                     </li>
                                     <li>
-                                        <a href="#">Bed</a>
-                                        <span>(250)</span>
+                                        <a id="bed">Bed</a>
                                     </li>
 
                                 </ul>
                             </div>
                         </aside>
-
-
-                        <aside class="left_widgets p_filter_widgets">
-                            <div class="l_w_title">
-                                <h3>Color Filter</h3>
-                            </div>
-                            <div class="widgets_inner">
-                                <ul class="list">
-                                    <li>
-                                        <a href="#">Black</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Black Leather</a>
-                                    </li>
-                                    <li class="active">
-                                        <a href="#">Black with red</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Gold</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Spacegrey</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </aside>
-
-
                     </div>
                 </div>
                 <div class="col-lg-9">
@@ -125,26 +96,19 @@ include 'includes/header.php';
                                 </div>
                                 <div class="single_product_menu d-flex">
                                     <h5>sort by : </h5>
-                                    <select >
-                                        <option data-display="Select">name</option>
+                                    <select id="sortBy">
+                                        <option data-display="Select">select</option>
                                         <option value="1">price</option>
-                                        <option value="2">product</option>
+                                        <option value="2">category</option>
                                     </select>
                                 </div>
                                 <div class="single_product_menu d-flex">
-                                    <h5>show :</h5>
-                                    <div class="top_pageniation">
-                                        <ul>
-                                            <li><a href="#" style="color:black;">1</a></li>
-                                            <li><a href="#" style="color:black;">2</a></li>
-                                            <li><a href="#" style="color:black;">3</a></li>
-                                        </ul>
-                                    </div>
+  
                                 </div>
                                 <div class="single_product_menu d-flex">
                                     <div class="input-group">
                                         <input type="text" class="form-control" placeholder="search"
-                                            aria-describedby="inputGroupPrepend">
+                                            aria-describedby="inputGroupPrepend" id="searchProduct">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend"><i
                                                     class="ti-search"></i></span>
@@ -155,35 +119,8 @@ include 'includes/header.php';
                         </div>
                     </div>
 
-                    <div class="row align-items-center latest_product_inner" >
-                      <span id="products"></span> <!-- lable for jquery display product list -->
+                    <div class="row align-items-center latest_product_inner" id="products">
 
-
-
-                        <div class="col-lg-12">
-                            <div class="pageination">
-                                <nav aria-label="Page navigation example">
-                                    <ul class="pagination justify-content-center">
-                                        <li class="page-item">
-                                            <a class="page-link" href="#" aria-label="Previous">
-                                                <i class="ti-angle-double-left"></i>
-                                            </a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">6</a></li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="#" aria-label="Next">
-                                                <i class="ti-angle-double-right"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

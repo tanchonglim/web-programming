@@ -75,7 +75,7 @@ $lname = $_SESSION['lname'];
         <div class="row">
           <div class="col-lg-12">
             <h3>Shipping Details</h3>
-            <form class="row contact_form" action="./function/createOrder.php" method="post" id="checkout_form" novalidate>
+            <form class="row contact_form" action="./function/createOrder.php" method="post" id="checkout_form">
               <div class="col-md-6 form-group p_star">
                 <input type="text" class="form-control" id="first" name="fname" placeholder="First name" value="<?php echo $fname;?>" required/>
               </div>
