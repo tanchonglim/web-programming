@@ -5,6 +5,8 @@ if(!isset($_SESSION['UID'])){
   goto2('index.php');
 }
 
+require_once("all.php");
+
 
 
 
