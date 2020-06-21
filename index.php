@@ -49,7 +49,15 @@ include 'includes/header.php';
                 </div>
             </div>
             <div style="height:300px">
-
+              <div style="text-align:center">
+                <p>Admin:</p>
+                <p>admin@minorsales.xyz</p>
+                <p>admin</p>
+                <br>
+                <p>User:</p>
+                <p>demo@minorsales.xyz</p>
+                <p>demo</p>
+              </div>
             </div>
         </div>
     </section>

@@ -92,7 +92,7 @@ include 'includes/header.php';
                         <div class="col-lg-12">
                             <div class="product_top_bar d-flex justify-content-between align-items-center">
                                 <div class="single_product_menu">
-                                    <p><span>10000 </span> Product Found</p>
+
                                 </div>
                                 <div class="single_product_menu d-flex">
                                     <h5>sort by : </h5>
@@ -103,7 +103,7 @@ include 'includes/header.php';
                                     </select>
                                 </div>
                                 <div class="single_product_menu d-flex">
-  
+
                                 </div>
                                 <div class="single_product_menu d-flex">
                                     <div class="input-group">
