@@ -1,10 +1,11 @@
 <?php
 include 'includes/header.php';
 require_once("all.php");
-
 if(!isset($_SESSION['UID'])){
-  header('Location:index.php');
+  goto2('index.php');
 }
+
+
 
 
 $sql = "SELECT max(ProductID) AS m FROM product";

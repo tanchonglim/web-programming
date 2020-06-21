@@ -1,6 +1,6 @@
 <?php
 include("function/dbcon.php");
-include("function/function.php");
+require_once("function/function.php");
  ?>
 
  <link rel="icon" href="img/favicon.png">

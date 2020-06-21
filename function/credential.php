@@ -10,10 +10,11 @@
     $result = mysqli_query($con,$sql);
     $row = mysqli_fetch_assoc($result);
 
-    echo $row['UID'];
-
     if($row['UID']==1){
       $_SESSION['UID'] = $row['UID'];
+      $_SESSION['fname'] = $row['firstname'];
+      $_SESSION['lname'] = $row['lastname'];
+      $_SESSION['email'] = $row['email'];
       header('Location:../index.php?message=admin');
     } else if($row['UID']!='') {
       $_SESSION['UID'] = $row['UID'];

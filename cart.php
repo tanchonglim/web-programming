@@ -1,8 +1,11 @@
 <?php
 include 'includes/header.php';
+require_once 'function/function.php';
 if(!isset($_SESSION['UID'])){
-  header('Location:login.php');
+  goto2('login.php');
 }
+
+
  ?>
 <!doctype html>
 <html lang="zxx">

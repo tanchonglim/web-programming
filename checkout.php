@@ -1,13 +1,16 @@
 <?php
-include 'includes/header.php';
+require_once 'includes/header.php';
+require_once 'function/function.php';
+if(!isset($_SESSION['UID'])){
+  goto2('login.php');
+}
+
 $UID ='';
 $email = '';
 $fname = '';
 $lname = '';
 
-if(!isset($_SESSION['UID'])){
-  header('Location:login.php');
-}
+
 
 $UID = $_SESSION['UID'];
 $email = $_SESSION['email'];

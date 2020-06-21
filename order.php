@@ -1,10 +1,14 @@
 <?php
 include 'includes/header.php';
+require_once 'function/function.php';
+
 if(!isset($_SESSION['UID'])){
-  header('Location:./login.php');
+  goto2('./login.php');
 } else if($_SESSION['UID']=='1'){
-  header('Location:./admin-order.php');
+  goto2('./admin-order.php');
 }
+
+
  ?>
 
 <!doctype html>
