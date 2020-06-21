@@ -1,13 +1,15 @@
 <?php
 include 'includes/header.php';
+if(!isset($_SESSION['UID'])){
+  header('Location:index.php');
+}
+
 require_once("all.php");
 include("function/retrievedata.php");
 include("function/update.php");
 include("function/delete.php");
 
-if(!isset($_SESSION['UID'])){
-  header('Location:index.php');
-}
+
  ?>
 
  <head>

@@ -1,13 +1,15 @@
 <?php
 include 'includes/header.php';
+if(!isset($_SESSION['UID'])){
+  header('Location:login.php');
+}
+
 $UID ='';
 $email = '';
 $fname = '';
 $lname = '';
 
-if(!isset($_SESSION['UID'])){
-  header('Location:login.php');
-}
+
 
 $UID = $_SESSION['UID'];
 $email = $_SESSION['email'];

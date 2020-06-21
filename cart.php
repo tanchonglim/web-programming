@@ -3,6 +3,8 @@ include 'includes/header.php';
 if(!isset($_SESSION['UID'])){
   header('Location:login.php');
 }
+
+
  ?>
 <!doctype html>
 <html lang="zxx">

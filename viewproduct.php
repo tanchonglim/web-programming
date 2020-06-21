@@ -1,11 +1,13 @@
 <?php
 include 'includes/header.php';
-require_once("all.php");
-include("function/retrievedata.php");
-
 if(!isset($_SESSION['UID'])){
   header('Location:index.php');
 }
+
+require_once("all.php");
+include("function/retrievedata.php");
+
+
  ?>
 
  <head>

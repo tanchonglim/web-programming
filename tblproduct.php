@@ -1,10 +1,12 @@
 <?php
 include 'includes/header.php';
-require_once("all.php");
-
 if(!isset($_SESSION['UID'])){
   header('Location:index.php');
 }
+
+require_once("all.php");
+
+
 
 
 $sql = 'SELECT * FROM `product`';

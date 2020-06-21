@@ -10,8 +10,6 @@
     $result = mysqli_query($con,$sql);
     $row = mysqli_fetch_assoc($result);
 
-    echo $row['UID'];
-
     if($row['UID']==1){
       $_SESSION['UID'] = $row['UID'];
       header('Location:../index.php?message=admin');

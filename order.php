@@ -5,6 +5,8 @@ if(!isset($_SESSION['UID'])){
 } else if($_SESSION['UID']=='1'){
   header('Location:./admin-order.php');
 }
+
+
  ?>
 
 <!doctype html>
