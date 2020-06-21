@@ -80,7 +80,7 @@ if(!isset($_SESSION['UID'])){
                 <p>total</p><span>: RM <span id="price"></span> </span>
               </li>
               <li>
-                <p>payment methord</p><span>: Cash On Delivery</span>
+                <p>payment method</p><span>: Cash On Delivery</span>
               </li>
             </ul>
           </div>
