@@ -235,7 +235,6 @@ include 'includes/footer.php';
   <script src="js/stellar.js"></script>
   <script src="js/price_rangs.js"></script>
   <!-- custom js -->
-  <script src="js/custom.js"></script>
   <script src='customjs/validatecheckout.js'></script>
   <script src="customjs/checkout.js"></script>
 

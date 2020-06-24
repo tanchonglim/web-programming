@@ -31,40 +31,86 @@ include 'includes/header.php';
 
 <body>
 
-    <!-- banner part start-->
 
-    <!-- banner part start-->
 
-    <!-- product_list start-->
-    <section class="product_list section_padding">
+    <!-- awesome_shop start-->
+    <section class="banner_part">
         <div class="container">
-            <div class="row justify-content-center">
-                    <div class="section_tittle text-center">
-                        <h1>HELLO <?php
-                        if(isset($_SESSION['fname'])&&isset($_SESSION['lname'])){
-                          echo $_SESSION['fname']." ".$_SESSION['lname'];
-                        } else {
-                          echo " Guest, please login.";
-                        } ?></h1>
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="banner_slider owl-carousel" id="products">
+                        <div class="single_banner_slider">
+                            <div class="row">
+                                <div class="col-lg-5 col-md-8">
+                                    <div class="banner_text">
+                                        <div class="banner_text_iner">
+                                            <h1>Wood & Cloth
+                                                Sofa</h1>
+                                            <p>Incididunt ut labore et dolore magna aliqua quis ipsum
+                                                suspendisse ultrices gravida. Risus commodo viverra</p>
+                                            <a href="./list-product.php" class="btn_2">buy now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="banner_img d-none d-lg-block">
+                                    <img src="img/banner_img.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-counter"></div>
                 </div>
-            </div>
-            <div style="height:300px">
-              <div style="text-align:center">
-                <p>Admin:</p>
-                <p>admin@minorsales.xyz</p>
-                <p>admin</p>
-                <br>
-                <p>User:</p>
-                <p>demo@minorsales.xyz</p>
-                <p>demo</p>
-              </div>
             </div>
         </div>
     </section>
-    <!-- product_list part start-->
+    <!-- banner part start-->
 
-    <!-- awesome_shop start-->
-
+    <!-- feature_part start-->
+    <section class="feature_part padding_top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section_tittle text-center">
+                        <h2>Featured Category</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-7 col-sm-6">
+                    <div class="single_feature_post_text">
+                        <p>Premium Quality</p>
+                        <h3>Bed</h3>
+                        <a href="./list-product.php" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
+                        <img src="img/feature/feature_1.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-sm-6">
+                    <div class="single_feature_post_text">
+                        <p>Premium Quality</p>
+                        <h3>Table and desk</h3>
+                        <a href="./list-product.php" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
+                        <img src="img/feature/feature_2.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-sm-6">
+                    <div class="single_feature_post_text">
+                        <p>Premium Quality</p>
+                        <h3>Chair</h3>
+                        <a href="./list-product.php" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
+                        <img src="img/feature/feature_3.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-7 col-sm-6">
+                    <div class="single_feature_post_text">
+                        <p>Premium Quality</p>
+                        <h3>Sofa</h3>
+                        <a href="./list-product.php" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
+                        <img src="img/feature/feature_4.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- awesome_shop part start-->
 
     <!-- subscribe_area part start-->

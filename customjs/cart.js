@@ -59,12 +59,10 @@ function appendProduct(product){
 
 function removeProduct(productID){
   localStorage.removeItem(productID);
-  console.log('removed');
 }
 
 function updatePrice(productID, price){
   let qtty = $(`#qty${productID}`).val();
-  console.log(qtty);
   let total = price * qtty;
   $("#total"+productID).html(total);
   updateTotal();

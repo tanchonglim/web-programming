@@ -25,9 +25,6 @@
     );
     array_push($allProducts, $product);
   }
-
-
   echo json_encode($allProducts);
-
 
  ?>

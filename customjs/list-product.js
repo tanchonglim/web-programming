@@ -75,7 +75,6 @@ $(document).ready(function(){
             return a.ProductName.toLowerCase().includes(search);
           });
           appendProduct(newData);
-          console.log(search);
         });
   });
 

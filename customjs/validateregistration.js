@@ -6,7 +6,6 @@ regForm.first.addEventListener('change', isAlphabet);
 regForm.last.addEventListener('change', isAlphabet);
 regForm.password.addEventListener('change', lengthRestriction);
 
-
 function validateEmail(){
   let emailExp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
   if(!this.value.match(emailExp)){
